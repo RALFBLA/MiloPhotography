@@ -373,7 +373,7 @@ nav a:focus { /* tiny variations when hovering over nav options */
   }
 }
 
-@media (min-width: 65.1rem){
+@media (min-width: 70rem){
   .home-about {
     background-attachment: fixed; /* creates 'parallax-like' feeling */
   }
