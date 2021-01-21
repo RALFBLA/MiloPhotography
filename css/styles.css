@@ -276,6 +276,16 @@ nav a:focus { /* tiny variations when hovering over nav options */
   }
 }
 
+@media screen and (orientation:landscape) { /* puts the logo on left and navigation on right when on mobile landscape mode */
+  .logo {
+    float:left;
+  }
+
+  nav {
+    float:right;
+  }
+}
+
 @media (max-width: 65.1rem) {
   .logo {
    height: 15vw;
@@ -386,6 +396,12 @@ nav a:focus { /* tiny variations when hovering over nav options */
   .photographs {
     background-image: none;
   }
+}
+
+@media screen and (orientation:landscape) {
+   .home-about-text {
+     font-size: 2vw; 
+   }
 }
 
 #i1, #i2, #i3, #i4, #i5, #i6, #i7, #i8, #i9, #i10{display: none;} /* keeps 'track' of what photo it's on */
