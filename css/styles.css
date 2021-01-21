@@ -400,7 +400,7 @@ nav a:focus { /* tiny variations when hovering over nav options */
 
 @media screen and (orientation:landscape) {
    .home-about-text {
-     font-size: 2vw; 
+     width: 70%;
    }
 }
 
