@@ -70,7 +70,6 @@ h1 {
 @media (max-width: 65.1rem) { /* change font size on bigger devices */
   .title {
     font-size: 5vw;
-    margin-top: 30%;
   }
 }
 
@@ -279,11 +278,11 @@ nav a:focus { /* tiny variations when hovering over nav options */
 
 @media (max-width: 65.1rem) {
   .logo {
-   height: 20vw;
+   height: 15vw;
    position: center;
   }
   nav a {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 }
 
