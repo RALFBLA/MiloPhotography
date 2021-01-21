@@ -290,11 +290,11 @@ nav a:focus { /* tiny variations when hovering over nav options */
   width: 150%;
   }
   .change-bg{
-  width: 550px;
-  height: 540px;
+  width: 650px;
+  height: 640px;
   }
   .bnav {
-  font-size: 3vw;
+  font-size: 3.7vw;
 }
 }
 
