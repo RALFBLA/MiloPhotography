@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); /* importing/finding fonts */
+
+@font-face { /* importing/finding fonts */
+  font-family: lemonmilk;
+  src: url(../font/LEMONMILK-Medium.otf);
+  font-style: normal;
+}
+
+@font-face { /* importing/finding fonts */
+  font-family: robotobold;
+  src: url(../font/Roboto-Bold.ttf);
+  font-style: normal;
+}
+
+html{ /* smooth scrolls - mostly for when navigation scrolls you to certain part of the page */
+  scroll-behavior: smooth;
+}
+
+* { /* account for borders/padding */
+  box-sizing: border-box;
+  transition: all ease-in-out 250ms;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+body.preload *{ /* prevent initial burger menu slide out animation */
+animation-duration: 0s !important;
+-webkit-animation-duration: 0s !important;
+transition:background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s !important;}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 80em;
+}
+
+.clearfix::after, /* fixes problems with floating div/pictures */
+section::after {
+  content: '';
+  display: block;
+  clear:both;
+}
+
+/* typography */
+
+h1 {
+  font-weight: 300;
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.title {
+  font-family: lemonmilk;
+  font-weight: 900;
+  font-size: 3rem;
+  color: #FFF;
+  margin-bottom: 1.5em;
+  font-weight: 900;
+  margin-top: 1em;
+}
+
+@media (max-width: 65.1rem) { /* change font size on bigger devices */
+  .title {
+    font-size: 5vw;
+    margin-top: 30%;
+  }
+}
+
+/* buttons */
+
+.button {
+  display: inline-block; /* increase text will also increase button border */
+  font-family: "robotobold";
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-width: 2px;
+  border-style: solid;
+  padding: .5em 1.5em;
+}
+
+.button-accent {
+  color: #836DFF;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* slight shadow for asthetics */
+  border-color: #836DFF;
+}
+
+.button-accent-hire {
+  color: #000;
+  border-color: #000;
+}
+
+.buttton-accent:hover,
+.button-accent:focus { /* variations when hovering over button or clicking */
+  background: #836DFF;
+  color:#232323;
+}
+
+.buttton-accent-hire:hover,
+.button-accent-hire:focus { /* variations when hovering over button or clicking */
+  background: #232323;
+  color:#836DFF;
+}
+
+@media (max-width: 65.1rem) { /* change font for bigger displays */
+  .button {
+    font-size: 3vw;
+  }
+}
+
+
+
+/* header */
+
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 1em;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block; /* horizontal navigation */
+  margin: 1em;
+  margin-top: 2em;
+}
+
+nav a {
+  font-family: 'lemonmilk';
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .8rem;
+  padding: .5em;
+  color: #FFF;
+}
+
+nav a:hover,
+nav a:focus { /* tiny variations when hovering over nav options */
+  color: #DDD;
+}
+
+#menu{ /* burger menu styling */
+	width: 35px;
+	height: 30px;
+	margin: 30px 0 20px 20px;
+  position: fixed;
+}
+.bar{
+	height: 5px;
+	width: 100%;
+	background-color: #836DFF;
+	display: block;
+	border-radius: 5px;
+	transition: 0.3s ease;
+}
+#bar1{ /* creating space between the lines, making it look like a burger menu */
+	transform: translateY(-4px);
+}
+#bar3{
+	transform: translateY(4px);
+}
+.bnav li a{ /* burgernav options */
+	color: #fff;
+  font-family: "lemonmilk";
+  font-transform: uppercase;
+	text-decoration: none;
+}
+.bnav li a:hover{ /* tiny variations when hovering over burgernav options */
+	font-weight: bold;
+}
+.bnav li{
+	list-style: none;
+	padding: 16px 0;
+}
+.bnav{
+	padding: 0;
+	margin: 60px 20px;
+	transition: 0.3s ease; /* bugernav transitions - makes it look 'smooth' */
+	display: none;
+}
+.menu-bg, #menu-bar{
+	top: 0;
+	left: 0;
+	position: fixed;
+}
+.menu-bg{
+	z-index: 10;
+	width: 0;
+	height: 0;
+	margin: 30px 0 20px 20px;
+	background: radial-gradient(circle,#836DFF, #736DFF);
+	border-radius: 50%;
+	transition: 0.3s ease; /* creating background and the circular animation/transition */
+}
+#menu-bar{
+	z-index: 11;
+}
+.change-bg{
+	width: 450px;
+	height: 440px;
+	transform: translate(-60%,-30%);/* changing the burgermenu background */
+  position: fixed;
+}
+.change .bar{  /* burgermenu icon animations */
+	background-color: white;
+}
+.change #bar1{
+	transform: translateY(4px) rotateZ(-45deg);
+}
+.change #bar3{
+	transform: translateY(-6px) rotate(45deg);
+}
+.change #bar2{
+	opacity: 0;
+}
+.change{
+	display: block;
+}
+
+.hide { /* animation for burgernav icon to slide out and hide */
+    animation: slideout 0.2s linear;
+    opacity: 0;
+    left: -100px;
+}
+.show { /* animation for burgernav icon to slide in and show */
+    opacity:1;
+    left:0;
+    animation: slidein 0.2s linear;
+}
+
+.cursor { /* defining cursor class to utilize in burger.js (wont show cursor when burgernav icon isnt showing) */
+  cursor: pointer;
+}
+
+@keyframes slideout{ /* animations */
+	0%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+	100%{
+    transform:translate(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes slidein{ /* animations */
+	0%{
+    transform: translateX(-100px);
+  }
+	100%{
+    transform:translate(0px);
+  }
+}
+
+@media (min-width: 65.1rem) { /* puts the logo on left and navigation on right when on bigger devices */
+  .logo {
+    float:left;
+  }
+
+  nav {
+    float:right;
+  }
+}
+
+@media (max-width: 65.1rem) {
+  .logo {
+   height: 20vw;
+   position: center;
+  }
+  nav a {
+    font-size: 3vw;
+  }
+}
+
+
+/* home-hero */
+
+.home-hero {
+  background-image: url(../image/home.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* creates 'parallax-like' feeling */
+  padding: 10em 0;
+  height: 100vh;
+  padding-top: 35vh;
+}
+
+
+/* home-hero why hire me*/
+
+.navy-bg {
+  background-color: #0c2434;
+}
+
+.home-about-text {
+  background-image: url(../image/aboutbackground.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  font-family: 'Roboto';
+  top: -5em;
+  padding: 2em;
+  width: 100vw;
+  margin-left: -2.5vw;
+  color: #FFF;
+  width: 40%;
+  box-shadow: 0 0 4em 0 rgba(0, 0, 0, 0.5); /* slight boxshadow to make it look slightly better */
+}
+
+.home-about-text h1 {
+  color: #836DFF;
+  font-family: 'lemonmilk';
+  position: relative;
+  font-weight: bold;
+}
+
+.home-about {
+  background-image: url(../image/pfp.jpg);
+  padding-bottom: 25em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* creates 'parallax-like' feeling */
+}
+
+@media (max-width: 65.1rem){
+  .home-about {
+    background-image: url(../image/pfp.jpg); /* changes background to the photo of the photographer in smaller devices */
+    background-attachment: scroll; /* stops parallax effects on smaller devices */
+    max-height: 100vh;
+  }
+  .home-about-text {
+    background-image: none; /* makes the translucent background instead of a picture */
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 60%;
+    top: 0em;
+    font-size: 2.5vw;
+  }
+  .home-about-text h1 {
+    font-size: 3.5vw;
+  }
+}
+/* home-hero photographs*/
+
+.photographs {
+  background-image: url(../image/galleryoutline.png);
+  padding: 30em 0;
+  margin-top: -12.5em;
+  background-repeat: no-repeat;
+  background-size:contain;
+  position: relative;
+}
+
+@media (max-width: 90em) { /* hides the camera frame image once you go to smaller display */
+  .photographs {
+    background-image: none;
+  }
+}
+
+#i1, #i2, #i3, #i4, #i5, #i6, #i7, #i8, #i9, #i10{display: none;} /* keeps 'track' of what photo it's on */
+
+.frame {
+		margin: 0 auto;
+		margin-top: -21em;
+		position: relative;
+		width: 85%;
+		height: 0;
+		padding-bottom: 38%;
+	  user-select: none;
+		background-color: #1c1c1c;
+		border: solid 10px #000;
+		border-radius:10px ;
+    margin-left: 2em;
+	}
+
+  @media (max-width: 90rem) { /* makes the frame take up the whole width when camera frame hides */
+    .frame {
+      width: 100%;
+      margin-left: 0;
+      position: center;
+      min-height: 70vw;
+    }
+  }
+
+
+	.frame .slide_img{ /* portfolio images */
+		position: absolute;
+		width: 100%;;
+		height: 100%;
+	}
+	.frame .slide_img img{
+		width: inherit;
+		height: inherit;
+    object-fit: cover;
+	}
+
+	 .prev, .next{ /* previous and next picture navitagion */
+		width: 5%;
+		height: inherit;
+		position: absolute;
+		top:0;
+		background-color: rgba(88, 88, 88,.2);
+		color:rgba(244, 244, 244,.9);
+		z-index: 99;
+		transition: .45s;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	.next{right:0;}
+	.prev{left:0;}
+
+	label span{ /* more previous and next navigation icon positioning */
+		position: absolute;
+		font-size: 50pt;
+		top: 50%;
+	 	transform: translateY(-50%);
+    transform: translateX(-50%);
+	}
+
+	.prev:hover, .next:hover{ /* lighter background on prev and next nav when hover */
+		transition: .3s;
+		background-color: rgba(88, 88, 89,.8);
+		color: #ffffff;
+	}
+
+
+.slide_img{z-index: -1;}
+
+	#i1:checked ~ #one  , /* assigning which photo should be shown depending on what number of the 'list' the viewer is currently on */
+	#i2:checked ~ #two  ,
+	#i3:checked ~ #three,
+	#i4:checked ~ #four ,
+	#i5:checked ~ #five ,
+  #i6:checked ~ #six ,
+  #i7:checked ~ #seven ,
+  #i8:checked ~ #eight ,
+  #i9:checked ~ #nine ,
+  #i10:checked ~ #ten
+	{z-index: 9; animation: scroll 1s ease-in-out;}
+
+@keyframes scroll{ /* images switch animation */
+	0%{	opacity:.4;}
+	100%{opacity:1;}
+}
+
+/* Bundles */
+
+.bundles {
+	margin-top: -30vw;
+  font-family: "LEMONMILK";
+}
+.bund-item {
+	margin: 0;
+	position: relative;
+}
+.bund-item image {
+	display: block;
+}
+
+.Bundle-desc {
+	position: absolute;
+	z-index: 100;
+	bottom: 0em;
+	left: 0em;
+	right: 0em;
+	color: white;
+	background: rgba(0,0,0,.6);
+  padding-bottom: 1em;
+}
+
+@media (min-width: 1500px) { /* keeping the text in a relatively good position at different sizes*/
+	.bundles {
+    margin-top: -25vw;
+  }
+}
+@media (min-width: 1700px) {
+	.bundles {
+    margin-top: -20vw;
+  }
+}
+@media (min-width: 2000px) {
+	.bundles {
+    margin-top: -13vw;
+  }
+}
+
+
+
+@media (max-width: 65.1rem) {
+	.bundles {
+    margin-top: -45vw;
+  }
+}
+
+
+@media (min-width: 65.1rem) { /* when on bigger devices, lay the bundles out in 1 row of 3 instead of all 1 column of 3 */
+	.bund-item {
+		width: 33.33%;
+		overflow: hidden;
+    float: left;
+	}
+
+
+	.Bundle-desc { /* hides price initially */
+		transform:  translateY(150%)
+	}
+
+	.bund-item:hover .Bundle-desc {/* reveals price when hovering */
+		transform: translateY(0%);
+	}
+}
+
+/* Hiring */
+
+h1 { /* hiring 'bar' formating */
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.title-schedule {
+  font-family: "lemonmilk";
+  font-weight: 900;
+  font-size: 3rem;
+  color: #FFF;
+  font-weight: 900;
+  margin: 0 0 .5em;
+}
+
+.title-schedule span {
+  font-family: "Roboto";
+  color: #FFF;
+  font-weight: 300;
+  display: block;
+  font-size: 0.9em;
+}
+
+.hiring {
+  background-color: #836DFF;
+  padding: 3em 0;
+}
+
+/* Footer */
+
+footer { /* footer formating */
+  background: #232323;
+  margin: 0;
+  padding: 0;
+}
+
+.social-media {
+  margin-left:-35px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-media ul li { /* social media options */
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background-color: #eee;
+  margin: auto 45px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 50px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: .5s;
+}
+
+.social-media i { /* social media icon initial color */
+  color: #232323;
+}
+
+.social-media ul li:nth-child(1):hover{ /* hover animations/transitions */
+  border-radius: 50%;
+  background-color: #c13584;
+}
+.social-media ul li:nth-child(2):hover{
+  border-radius: 50%;
+  background-color: #00acee;
+}
+.social-media ul li:nth-child(3):hover{
+  border-radius: 50%;
+  background-color: blue;
+}
+.social-media ul li:hover i {
+  color: #eee;
+}

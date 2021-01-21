@@ -1,0 +1,173 @@
+@font-face { /*inserting fonts used*/
+  font-family: lemonmilk;
+  src: url(../font/LEMONMILK-Medium.otf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: robotobold;
+  src: url(../font/Roboto-Bold.ttf);
+  font-style: normal;
+}
+
+body /*normal styling, creating slightly trasnlucent background as well for the info boxes*/
+{
+    margin: 20;
+    padding-top: 20;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,50,0.5),rgba(0,0,50,0)),url(../image/photo8.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: "lemonmilk";
+}
+
+.back {
+  float: left;
+  height: 50px;
+  width: 50px;
+  font-size: 3vw;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 1vw;
+}
+
+.back i {
+  color: #836DFF;
+}
+
+.back i:hover {
+  color: #6A58CE;
+}
+
+
+
+#contact-form {
+  font-family: "robotobold";
+  color: #fff;
+}
+
+.box
+{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: rgba(29, 28, 28, 0.747);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.514);
+  padding-bottom: 10px;
+  padding-top: 5px;
+  height: auto;
+  width: 60%;
+  left: 15%;
+  top: 5%;
+  position: relative;
+
+}
+.Contact-title
+{
+    margin-top: auto;
+    color: #836DFF;
+    text-transform: uppercase;
+    transition: all 4s ease-in-out;
+}
+.value
+{
+  background-color: rgba(17, 17, 17, 0.747);
+}
+
+
+/* Style inputs, select elements and textareas */
+input[type=type], select, textarea{
+  color: #8f8888;
+    font-family: sans-serif;
+    width: 75%;
+    background: black;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding: 12px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+input[type=text], select, textarea{
+  color: #f2f2f2;
+    font-family: sans-serif;
+    width: 75%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  input[type=email], select, textarea{
+    color: #f2f2f2;
+    font-family: sans-serif;
+    width: 75%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+
+  input[type=submit] {
+    background-color: #836DFF;
+    font-family: "robotobold";
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: inline-end;
+  }
+  input[type=submit]:hover {
+    background-color: #6A58CE;
+  }
+
+
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 200px;
+  }
+
+
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+
+
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }

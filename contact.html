@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Contact Us Design</title>
+        <link rel="stylesheet" type="text/css" href="css/contact.css">
+        <script src="https://kit.fontawesome.com/03be19bf30.js" crossorigin="anonymous"></script> <!-- loading fontawesome for back button font -->
+    </head>
+
+<button class="back"><a href="index.html"><i class="fas fa-arrow-circle-left"></i></a></button>
+    <body>
+          <div class="box">
+
+        <div class= "Contact-title">
+                <h1 style="color: #836DFF;"> Contact Us</h1>
+                <h3 style="color: #836DFF;"> Feel free to ask any question related to the website</h3>
+        </div>
+
+        <div class="contact-form">
+            <form id="contact-form" method="post" action="">
+
+                <label for="Type">Subject</label>
+                <br>
+                <select id="type" name="Type" > <!-- setting dropbox options -->
+                  <option class="value" value="Website">Website</option>
+                  <option class="value" value="Scheduling a Meeting">Scheduling an Appointment</option>
+                  <option class="value" value="Prices">Prices</option>
+                  <option class="value" value="Prices">Other</option>
+                </select>
+              <br>
+<!-- setting up 'categories' that needed to be answered -->
+                <label for="fname">First Name</label>
+                <br>
+                <input name="firstname" type="text" class="form-control" placeholder="Your Name" required>
+                <br>
+                <label for="lname">Last Name</label>
+                <br>
+                <input name="lastname" type="text" class="form-control" placeholder="Your Last Name" required>
+              <br>
+
+                <label for="email">Email</label>
+                <br>
+                <input name="email" type="email" class="form-control" placeholder="Your Email" required>
+              <br>
+
+                <label for="message">Message</label>
+                <br>
+                <textarea name="message" class="form-control" placeholder="Message" rows="6" required></textarea>
+              <br>
+                <input type="submit" class="form-control submit" value="SEND MESSAGE">
+            </form>
+        </div>
+
+    </body>
+</html>

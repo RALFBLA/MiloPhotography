@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name= "viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Milo Photography</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="https://kit.fontawesome.com/03be19bf30.js" crossorigin="anonymous"></script> <!-- Used for social media buttons -->
+  </head>
+
+  <body class="preload"> <!-- prevent intial burger menu slide out animation -->
+    <header>
+      <img src="image/logo.png" alt="maddina logo" class="logo" height="100">
+      <nav>
+        <ul>
+          <li><a href="#section2">About</a></li> <!-- href to slide down the page -->
+          <li><a href="#section4">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li> <!-- redirect to contact.html -->
+        </ul>
+      </nav>
+        <div id="menu-bar" class="hide"> <!-- intially hides the burger menu -->
+			<div id="menu" onclick="onClickMenu()">
+				<div id="bar1" class="bar"></div> <!-- using bars to create burger menu in order to animate later on -->
+				<div id="bar2" class="bar"></div>
+				<div id="bar3" class="bar"></div>
+			</div>
+			<ul class="bnav" id="bnav" onclick="closeMenu()"> <!--fixes problem where clicking 'home' in the menu would hide the icon but not the actually menu-->
+				<li><a href="#section1">Home</a></li>  <!-- href to slide down the page and redirect to contact.html -->
+				<li><a href="#section2">About</a></li>
+				<li><a href="#section4">Pricing</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<div class="menu-bg" id="menu-bg"></div>
+		<script src="js/script.js"></script> <!-- script that makes everything work for the actual burger menu (not the hiding/revealing)-->
+    </header>
+
+<div id="section1">
+    <section class="home-hero">
+    <div class="container">
+        <h1 class="title">Capturing the beauty of nature</h1>
+        <a href="#section3" class="button button-accent">Portfolio</a>
+    </div>
+  </section>
+</div>
+<script src="js/burger.js"></script> <!-- script that makes everything work for the burger menu, put here since script needs to recognize when you scroll past section 1 -->
+
+<div class="navy-bg"> <!--didn't like the white background when window size allows for extra space-->
+<div class="container">
+    <section class="home-about">
+      <div class="home-about-text">
+        <div id="section2">
+<h1>Why Hire Me?</h1>
+<p>My name is <strong>Milo Millan</strong>, and I am a young, upcoming photographer
+  that captures and reflects the beauty of nature and those that
+  appreciate nature. I reside in Florida and spend my free time
+  traveling the world, looking for and appreciating beautiful scenery.</p>
+  <p> My photography underscores the <strong>elegance and harmony</strong> between the nature and consumer,
+  while maintaining affordable bundles. I'm also open to custom offers to those that contact me, valuing
+  an easy, desirable, and stress-free experience for all customers.  </p>
+      </div>
+    </div>
+    </section>
+  </div>
+  </div>
+
+<div id="section3">
+    <section class="photographs">
+      <div class="frame"> <!-- 'holds' all the pictures -->
+
+      	<input type="radio" id="i1" name="images" checked /> <!-- keeps 'track' of what photo it's on-->
+      	<input type="radio" id="i2" name="images" />
+      	<input type="radio" id="i3" name="images" />
+      	<input type="radio" id="i4" name="images" />
+      	<input type="radio" id="i5" name="images" />
+        <input type="radio" id="i6" name="images" />
+        <input type="radio" id="i7" name="images" />
+        <input type="radio" id="i8" name="images" />
+        <input type="radio" id="i9" name="images" />
+        <input type="radio" id="i10" name="images" />
+
+      	<div class="slide_img" id="one"> <!-- define what photo comes next and before for each photo -->
+      			<img src="image/photo10.jpg">
+      				<label class="prev" for="i10"><span>&#x2039;</span></label>
+      				<label class="next" for="i2"><span>&#x203a;</span></label>
+      	</div>
+      	<div class="slide_img" id="two">
+      			<img src="image/photo14.jpg" >
+      				<label class="prev" for="i1"><span>&#x2039;</span></label>
+      				<label class="next" for="i3"><span>&#x203a;</span></label>
+      	</div>
+      	<div class="slide_img" id="three">
+      			<img src="image/photo6.jpg">
+      				<label class="prev" for="i2"><span>&#x2039;</span></label>
+      				<label class="next" for="i4"><span>&#x203a;</span></label>
+      	</div>
+      	<div class="slide_img" id="four">
+      			<img src="image/photo4.jpg">
+      				<label class="prev" for="i3"><span>&#x2039;</span></label>
+      				<label class="next" for="i5"><span>&#x203a;</span></label>
+      	</div>
+      	<div class="slide_img" id="five">
+      			<img src="image/photo5.jpg">
+      				<label class="prev" for="i4"><span>&#x2039;</span></label>
+      				<label class="next" for="i6"><span>&#x203a;</span></label>
+      	</div>
+        <div class="slide_img" id="six">
+            <img src="image/photo3.jpg">
+              <label class="prev" for="i5"><span>&#x2039;</span></label>
+              <label class="next" for="i7"><span>&#x203a;</span></label>
+        </div>
+        <div class="slide_img" id="seven">
+            <img src="image/photo9.jpg">
+              <label class="prev" for="i6"><span>&#x2039;</span></label>
+              <label class="next" for="i8"><span>&#x203a;</span></label>
+        </div>
+        <div class="slide_img" id="eight">
+            <img src="image/photo7.jpg">
+              <label class="prev" for="i7"><span>&#x2039;</span></label>
+              <label class="next" for="i9"><span>&#x203a;</span></label>
+        </div>
+        <div class="slide_img" id="nine">
+            <img src="image/photo11.jpg">
+              <label class="prev" for="i8"><span>&#x2039;</span></label>
+              <label class="next" for="i10"><span>&#x203a;</span></label>
+        </div>
+        <div class="slide_img" id="ten">
+            <img src="image/photo13.jpg">
+              <label class="prev" for="i9"><span>&#x2039;</span></label>
+              <label class="next" for="i1"><span>&#x203a;</span></label>
+        </div>
+      </div>
+    </section>
+  </div>
+
+    <section class="bundles">
+      <div id="section4">
+        <h1>Prices and Bundles</h1>
+    		<!-- Bundle 1 -->
+    		<figure class="bund-item">
+    		<img src="image/basic.jpg"
+    			 alt="Bundle option">
+    		<figcaption class="Bundle-desc"> <!-- displaying price, interactive when on bigger displays -->
+    			<p>$100.00</p>
+    			</figcaption></figure>
+    		<!-- Bundle 2 -->
+    		<figure class="bund-item">
+    		<img src="image/plus.jpg"
+    			 alt="Bundle option">
+    		<figcaption class="Bundle-desc">
+    			<p>$500.00</p>
+    			</figcaption></figure>
+    		<!-- Bundle 3 -->
+    		<figure class="bund-item">
+    		<img src="image/premium.jpg"
+    			 alt="Bundle option">
+    		<figcaption class="Bundle-desc">
+    			<p>$1000.00</p>
+    			</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="hiring"> <!-- a dedicated way to ensure people know how to hire the photographer -->
+      <div class="container">
+        <h1 class="title-schedule">Want to schedule a session?
+          <span>Contact me to book an appointment</span>
+        </h1>
+          <a href="contact.html" class="button button-accent-hire">Contact</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="social-media"> <!-- social media hrefs, using fontawesome as the icons -->
+      <ul>
+   <li><a href="https://www.instagram.com/milophotographyofficial/"><i class="fab fa-instagram"></i></a></li>
+   <li><a href="https://twitter.com/MiloPhotograph1"><i class="fab fa-twitter"></i></a></li>
+   <li><a href="https://www.facebook.com/milo.millan.399/"><i class="fab fa-facebook"></i></a></li>
+ </ul>
+    </footer>
+      </div>
+
+  </body>
+</html>
+
+<!-- Sources: http://clipart-library.com/clipart/camera-clipart_18.htm
+https://www.pikpng.com/pngvi/xmiRoT_digital-camera-screen-comments-camera-with-screen-icon-clipart/
+https://fontawesome.com/
+
+Photos from ourselves or from a friend, Febian Shah - who gave permission
+Social Media fonts from fontawesome-->
