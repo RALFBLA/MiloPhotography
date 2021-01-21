@@ -284,6 +284,18 @@ nav a:focus { /* tiny variations when hovering over nav options */
   nav a {
     font-size: 2vw;
   }
+  .bar{
+  height: 8px;
+  border-radius: 10px;
+  width: 150%;
+  }
+  .change-bg{
+  width: 550px;
+  height: 540px;
+  }
+  .bnav {
+  font-size: 3.7vw;
+}
 }
 
 
@@ -479,7 +491,7 @@ nav a:focus { /* tiny variations when hovering over nav options */
 
 .Bundle-desc {
 	position: absolute;
-	z-index: 100;
+	z-index: 5;
 	bottom: 0em;
 	left: 0em;
 	right: 0em;
