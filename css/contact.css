@@ -39,7 +39,11 @@ body /*normal styling, creating slightly trasnlucent background as well for the 
   color: #6A58CE;
 }
 
-
+@media (max-width: 65.1rem){
+  .back {
+    font-size: 5vw;
+  }
+}
 
 #contact-form {
   font-family: "robotobold";

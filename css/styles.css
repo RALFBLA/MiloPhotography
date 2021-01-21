@@ -455,6 +455,12 @@ nav a:focus { /* tiny variations when hovering over nav options */
 		color: #ffffff;
 	}
 
+  @media (max-width: 65.1rem){
+  .prev, .next {
+    width: 10%;
+  }
+}
+
 
 .slide_img{z-index: -1;}
 
