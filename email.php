@@ -5,9 +5,9 @@
     $message = $_POST['message'];
     $type = $_POST['type'];
 
-    $email_from = "contactfromwebsitemp@gmail.com";
+    $email_from = "leolam2222@gmail.com";
 
-    $email_subject = $type;
+    $email_subject = "New Form Submission";
 
     $email_body = "User Name: $fnam $lname \n"
                     "User Email: $sender_email \r\n"
