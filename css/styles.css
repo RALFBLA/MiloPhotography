@@ -398,9 +398,9 @@ nav a:focus { /* tiny variations when hovering over nav options */
   }
 }
 
-@media screen and (orientation:landscape) {
+@media screen and (orientation:landscape) and (max-width: 65.1rem) {
    .home-about-text {
-     width: 70%;
+     font-size: 2vw;
    }
 }
 
