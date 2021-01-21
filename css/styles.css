@@ -293,9 +293,9 @@ nav a:focus { /* tiny variations when hovering over nav options */
   background-image: url(../image/home.jpg);
   background-size: cover;
   background-position: center;
-   /* creates 'parallax-like' feeling */
   padding: 10em 0;
   height: 100vh;
+
   padding-top: 35vh;
 }
 
@@ -339,7 +339,6 @@ nav a:focus { /* tiny variations when hovering over nav options */
 @media (max-width: 65.1rem){
   .home-about {
     background-image: url(../image/pfp.jpg); /* changes background to the photo of the photographer in smaller devices */
-     /* stops parallax effects on smaller devices */
     max-height: 100vh;
   }
   .home-about-text {
@@ -351,6 +350,12 @@ nav a:focus { /* tiny variations when hovering over nav options */
   }
   .home-about-text h1 {
     font-size: 3.5vw;
+  }
+}
+
+@media (min-width: 65.1rem){
+  .home-about {
+    background-attachment: fixed; /* creates 'parallax-like' feeling */
   }
 }
 /* home-hero photographs*/
