@@ -295,7 +295,6 @@ nav a:focus { /* tiny variations when hovering over nav options */
   background-position: center;
   padding: 10em 0;
   height: 100vh;
-
   padding-top: 35vh;
 }
 
@@ -333,7 +332,6 @@ nav a:focus { /* tiny variations when hovering over nav options */
   padding-bottom: 25em;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed; /* creates 'parallax-like' feeling */
 }
 
 @media (max-width: 65.1rem){
@@ -355,6 +353,9 @@ nav a:focus { /* tiny variations when hovering over nav options */
 
 @media (min-width: 65.1rem){
   .home-about {
+    background-attachment: fixed; /* creates 'parallax-like' feeling */
+  }
+  .home-hero {
     background-attachment: fixed; /* creates 'parallax-like' feeling */
   }
 }
