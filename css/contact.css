@@ -13,7 +13,7 @@
 /*header*/
 
 header {
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   margin: 1em;
@@ -75,4 +75,9 @@ body /*normal styling, creating slightly trasnlucent background as well for the 
     background-size: cover;
     background-position: center;
     font-family: "lemonmilk";
+}
+
+iframe {
+  position: relative;
+  width: 100%;
 }
